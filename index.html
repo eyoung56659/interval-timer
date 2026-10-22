@@ -145,6 +145,70 @@ label.row{cursor:pointer}
 .startbtn .t{font-family:var(--font-num);font-size:26px;font-variant-numeric:tabular-nums;opacity:.8}
 .startbtn:disabled{opacity:.4;cursor:not-allowed}
 
+/* ---------- Header / Log ---------- */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logbtn{display:flex;align-items:center;gap:6px;height:38px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-size:14px;font-weight:600}
+.logbtn .st{font-family:var(--font-num);font-size:18px;font-weight:600}
+.logview{max-width:560px;margin:0 auto;padding:18px 16px 48px}
+.loghead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:6px 4px 16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px}
+.streak{display:flex;align-items:center;gap:16px}
+.streak .fire{font-size:44px;line-height:1}
+.streak .num{font-family:var(--font-num);font-size:56px;font-weight:600;line-height:.95;font-variant-numeric:tabular-nums}
+.streak .num small{font-family:var(--font-ui);font-size:18px;font-weight:600;margin-left:4px}
+.streak p{margin:4px 0 0;color:var(--muted);font-size:14px;line-height:1.5}
+.totline{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.totline b{color:var(--ink);font-weight:600}
+.weekdots{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center}
+.wd span{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
+.wd i{display:block;width:34px;height:34px;margin:0 auto;border-radius:50%;background:var(--field);font-style:normal;line-height:34px;font-size:15px}
+.wd.on i{background:var(--c-rest);color:#fff}
+.wd.today i{box-shadow:0 0 0 2px var(--ink)}
+.weekmeta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;flex-wrap:wrap}
+.weekmeta .big{font-family:var(--font-num);font-size:30px;font-weight:600;font-variant-numeric:tabular-nums}
+.weekmeta .goal{display:flex;align-items:center;gap:4px;font-size:14px;color:var(--muted)}
+.weekmeta .goal button{width:36px;height:36px;border-radius:10px;border:0;background:var(--field);font-size:20px}
+.weekmeta .goal b{color:var(--ink);min-width:34px;text-align:center}
+.prog{height:8px;border-radius:4px;background:var(--field);overflow:hidden;margin-top:10px}
+.prog div{height:100%;background:var(--c-rest);border-radius:4px}
+.seg.small span{padding:6px 10px;font-size:13px}
+.bars{display:flex;align-items:flex-end;gap:8px;height:150px;padding-top:18px}
+.bar{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.bar .v{font-size:11px;color:var(--muted);margin-bottom:4px;white-space:nowrap}
+.bar .b{width:100%;max-width:34px;border-radius:6px 6px 2px 2px;background:var(--ink);opacity:.8;min-height:2px}
+.bar.cur .b{background:var(--c-rest);opacity:1}
+.bar .l{font-size:11px;color:var(--muted);margin-top:6px;white-space:nowrap}
+.badges{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px}
+.bdg{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 8px;text-align:center}
+.bdg .ic{font-size:28px;line-height:1.1}
+.bdg b{display:block;font-size:13px;font-weight:600;margin-top:6px}
+.bdg small{display:block;font-size:11px;color:var(--muted);line-height:1.35;margin-top:2px}
+.bdg.locked .ic{filter:grayscale(1);opacity:.35}
+.bdg.locked b{color:var(--muted)}
+.dayhead{display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:var(--muted);margin:16px 6px 6px}
+.logrow .tm{font-family:var(--font-num);font-size:20px;font-weight:600;font-variant-numeric:tabular-nums;min-width:52px;flex:none}
+.chip2{flex:none;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--c-rest);color:#fff}
+.chip2.part{background:var(--field);color:var(--muted)}
+.empty{color:var(--muted);font-size:14px;padding:14px 4px}
+
+.celebrate{position:fixed;inset:0;z-index:40;display:flex;align-items:center;justify-content:center;padding:calc(20px + env(safe-area-inset-top,0px)) 20px calc(20px + env(safe-area-inset-bottom,0px));background:rgba(8,14,12,.55)}
+.cele-card{width:min(400px,100%);background:var(--surface);color:var(--ink);border-radius:24px;padding:26px 22px 20px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.3);animation:pop .35s cubic-bezier(.2,1.4,.4,1)}
+.cele-icon{font-size:64px;line-height:1}
+.cele-card h2{font-size:24px;margin:10px 0 6px;font-weight:600;letter-spacing:-.01em}
+.cele-card p{margin:0;color:var(--muted);font-size:15px;line-height:1.55}
+.cele-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:14px}
+.cele-badges span{background:var(--field);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600}
+.cele-lines{margin:16px 0 0;padding:14px 0 0;border-top:1px solid var(--line);display:grid;gap:6px;font-size:14px;text-align:left}
+.cele-lines div{display:flex;justify-content:space-between;gap:10px}
+.cele-lines span{color:var(--muted)}
+.cele-actions{display:flex;gap:8px;margin-top:18px}
+.cele-actions .btn{flex:1}
+@keyframes pop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
+.confetti{position:fixed;inset:0;z-index:35;pointer-events:none;overflow:hidden}
+.confetti i{position:absolute;top:-20px;width:9px;height:14px;border-radius:2px;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+@media (prefers-reduced-motion: reduce){ .cele-card{animation:none} .confetti{display:none} }
+
 /* ---------- Run ---------- */
 .run{position:fixed;inset:0;z-index:20;background:var(--pc);color:var(--po);
   padding:calc(14px + env(safe-area-inset-top,0px)) 20px calc(16px + env(safe-area-inset-bottom,0px));
@@ -207,7 +271,7 @@ label.row{cursor:pointer}
 <main class="setup" id="setup">
   <div class="jswarn" id="jsWarn">타이머 기능이 실행되지 않았습니다. 파일 앱 미리보기나 메신저, 드라이브 안의 뷰어는 스크립트를 막는 경우가 많습니다. 사파리나 크롬 같은 브라우저에서 열어 주세요.</div>
 
-  <header class="top"><h1>인터벌 타이머</h1></header>
+  <header class="top"><h1>인터벌 타이머</h1><button class="logbtn" id="logOpen" type="button" aria-label="운동 기록 보기">기록<span class="st" id="streakBadge"></span></button></header>
 
   <section class="plan" aria-label="운동 구성 미리보기">
     <canvas class="ribbon" id="ribbon" aria-hidden="true"></canvas>
@@ -308,6 +372,40 @@ label.row{cursor:pointer}
   </section>
 </main>
 
+<section class="logview" id="logView" hidden aria-label="운동 기록">
+  <div class="loghead"><h1>운동 기록</h1><button class="linkbtn" id="logBack" type="button">타이머로 돌아가기</button></div>
+  <div class="card" id="lgStreak"></div>
+  <section class="group"><h2>이번 주</h2><div class="card" id="lgWeek"></div></section>
+  <section class="group">
+    <div class="group-head"><h2>운동 시간</h2>
+      <div class="seg small" role="radiogroup" aria-label="기간 단위">
+        <label><input type="radio" name="lgMode" value="week" checked><span>주간</span></label>
+        <label><input type="radio" name="lgMode" value="month"><span>월간</span></label>
+      </div>
+    </div>
+    <div class="card"><div class="bars" id="lgBars"></div></div>
+  </section>
+  <section class="group"><h2 id="lgBadgeHead">배지</h2><div class="badges" id="lgBadges"></div></section>
+  <section class="group">
+    <div class="group-head"><h2>날짜별 기록</h2><button class="linkbtn" id="lgEdit" type="button">편집</button></div>
+    <div id="lgList"></div>
+    <button class="btn wide" id="lgMore" type="button" hidden>더 보기</button>
+  </section>
+  <p class="hint" id="lgStore"></p>
+</section>
+
+<div class="celebrate" id="cele" hidden role="dialog" aria-modal="true" aria-labelledby="celeTitle">
+  <div class="cele-card">
+    <div class="cele-icon" id="celeIcon" aria-hidden="true"></div>
+    <h2 id="celeTitle"></h2>
+    <p id="celeMsg"></p>
+    <div class="cele-badges" id="celeBadges"></div>
+    <div class="cele-lines" id="celeLines"></div>
+    <div class="cele-actions"><button class="btn" id="celeLog" type="button">기록 보기</button><button class="btn primary" id="celeOk" type="button">확인</button></div>
+  </div>
+</div>
+<div class="confetti" id="confetti" aria-hidden="true"></div>
+
 <div class="toast" id="toast" role="status" hidden></div>
 
 <div class="startbar" id="startbar">
@@ -361,7 +459,7 @@ const KEY = 'interval-timer-settings-v1';
 const SAVED_KEY = 'interval-timer-saved-v1';
 const SYNCED_KEY = 'interval-timer-saved-synced-v1';
 const DEFAULTS = { warmup:300, work:40, rest:20, reps:8, rounds:3, roundRest:60, cooldown:300,
-  scope:'once', half:true, countdown:true, wake:true, vibe:true, vol:'mid', workSound:'alarm', vOrient:'land' };
+  scope:'once', half:true, countdown:true, wake:true, vibe:true, vol:'mid', workSound:'alarm', vOrient:'land', weeklyGoal:3 };
 /* 저장한 설정에 들어가는 항목 (화면 켜짐, 진동, 소리 크기는 기기 설정이라 제외) */
 const PRESET_KEYS = ['warmup','work','rest','reps','rounds','roundRest','cooldown','scope','half','countdown','workSound'];
 const PRESETS = [
@@ -445,6 +543,7 @@ function sanitize(o, base){
   if ('vol' in out && !(out.vol in VOL)) out.vol = 'mid';
   if ('workSound' in out && !(out.workSound in WORK_SOUNDS)) out.workSound = 'alarm';
   if ('vOrient' in out && out.vOrient !== 'land' && out.vOrient !== 'port') out.vOrient = 'land';
+  if ('weeklyGoal' in out) out.weeklyGoal = clamp(Math.round(out.weeklyGoal), 1, 7);
   return out;
 }
 function pick(o, keys){ const r = {}; for (const k of keys) r[k] = o[k]; return r; }
@@ -493,6 +592,7 @@ function buildPlan(s){
     }
     if (s.countdown && g.dur >= 5) for (let j = 3; j >= 1; j--) events.push({ t:g.end - j, kind:'tick' });
   }
+  for (let i = segs.length - 1; i >= 0; i--) if (segs[i].type === 'work') { segs[i].lastWork = true; break; }
   events.push({ t:T, kind:'done' });
   events.sort((a, b) => a.t - b.t);
   return { segs, events, T, works:s.rounds * s.reps, rounds:s.rounds, reps:s.reps };
@@ -891,6 +991,7 @@ async function connectRemote(){
     if (!db || !user) return;
     const uid = await user.id();
     if (!uid) return;
+    connectLogs(db, uid);
     const ref = db.doc('data/users/' + uid + '/interval-timer');
     const snap = await ref.get();
     const remote = snap.exists ? cleanList((snap.data() || {}).items) : [];
@@ -1172,9 +1273,10 @@ function segLabels(g, P2){
   let L = '';
   if (g.type === 'warmup' && g.round === 0) L = '준비';
   else if (g.type === 'cool' && g.round === -1) L = '마무리';
+  else if (g.round === P2.rounds && P2.rounds > 1) L = `마지막 라운드 ${g.round}/${P2.rounds}`;
   else L = `라운드 ${g.round}/${P2.rounds}`;
   let R = '';
-  if (g.type === 'work') R = `운동 ${g.rep}/${P2.reps}`;
+  if (g.type === 'work') R = g.lastWork ? '마지막 운동' : `운동 ${g.rep}/${P2.reps}`;
   else if (g.type === 'rest') R = `운동 ${g.rep}/${P2.reps} 완료`;
   else if (g.type === 'round') R = `라운드 ${g.round} 완료`;
   return [L, R];
@@ -1369,6 +1471,7 @@ $('#vBtn').addEventListener('click', makeVideo);
 $('#vCancel').addEventListener('click', () => { if (vJob) { vJob.cancel = true; vJob.stop(); } });
 
 /* ---------- 실행 ---------- */
+
 const audio = $('#audio');
 const run = $('#run');
 let P = null, T = 0;
@@ -1412,14 +1515,7 @@ function onSeg(i){
   const g = P.segs[i];
   run.dataset.phase = g.type;
   setText('rPhase', PH[g.type]);
-  let L = '';
-  if (g.type === 'warmup' && g.round === 0) L = '준비';
-  else if (g.type === 'cool' && g.round === -1) L = '마무리';
-  else L = `라운드 ${g.round}/${P.rounds}`;
-  let R = '';
-  if (g.type === 'work') R = `운동 ${g.rep}/${P.reps}`;
-  else if (g.type === 'rest') R = `운동 ${g.rep}/${P.reps} 완료`;
-  else if (g.type === 'round') R = `라운드 ${g.round} 완료`;
+  const [L, R] = segLabels(g, P);
   setText('rTopL', L); setText('rTopR', R);
   $('#rHalf').hidden = !(g.type === 'work' && g.hasHalf);
   const n = P.segs[i + 1];
@@ -1514,6 +1610,7 @@ function start(){
   mainUrl = URL.createObjectURL(renderWav(plan.events, T + 3, VOL[S.vol], sampleRateFor(T)));
   try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) {}
   engine = 'audio'; state = 'running'; evIdx = 0; curIdx = -1;
+  runInfo = { at:Date.now(), name:currentName(), planned:T, worksTotal:plan.works }; playedBase = 0; playPos0 = 0; logged = false;
   for (const k in lastText) delete lastText[k];
   audio.src = mainUrl;
   const p = audio.play();
@@ -1544,6 +1641,7 @@ function resume(){
 }
 function seek(t){
   t = clamp(t, 0, T);
+  playedBase += Math.max(0, Math.min(clock(), T) - playPos0); playPos0 = t;
   if (engine === 'audio') { try { audio.currentTime = t; } catch (e) {} }
   else { wallBase = t; wallStart = performance.now(); }
   const ev = P.events;
@@ -1571,8 +1669,10 @@ function prev(){
 function finish(){
   if (state === 'done' || !P) return;
   if (engine === 'wall') processEvents(T + 0.05);
+  const res = logRun(true);
   state = 'done';
   cancelAnimationFrame(rafId); clearInterval(ivId);
+  if (res) setTimeout(() => celebrate(res), 700);
   releaseWake();
   run.classList.remove('paused');
   run.dataset.phase = 'done';
@@ -1596,7 +1696,9 @@ function showRun(){
   requestAnimationFrame(() => { drawRibbon($('#rRibbon'), P.segs, T, 5); tick(); });
 }
 function exitRun(){
+  const res = (state === 'running' || state === 'paused') ? logRun(false) : null;
   state = 'setup';
+  if (res) setTimeout(() => celebrate(res), 250);
   cancelAnimationFrame(rafId); clearInterval(ivId);
   try { audio.pause(); } catch (e) {}
   audio.removeAttribute('src'); try { audio.load(); } catch (e) {}
@@ -1608,6 +1710,379 @@ function exitRun(){
   $('#startbar').hidden = false;
   refresh();
 }
+
+
+/* ---------- 운동 기록 ---------- */
+const LOG_KEY = 'interval-timer-log-v1';
+const LOG_SYNC_KEY = 'interval-timer-log-synced-v1';
+const MIN_LOG = 60;
+const DAYS = ['일','월','화','수','목','금','토'];
+let logs = [];
+let logDb = null, logUid = null, logQ = Promise.resolve();
+let runInfo = null, playedBase = 0, playPos0 = 0, logged = false;
+let lgMode = 'week', lgLimit = 40, lgEditMode = false, lgArmed = null, lgArmTimer = 0;
+
+function cleanLog(r){
+  if (!r || typeof r !== 'object') return null;
+  const at = Number(r.at);
+  if (!isFinite(at) || at <= 0) return null;
+  const n = (v) => Math.max(0, Math.round(Number(v) || 0));
+  return { id: typeof r.id === 'string' && r.id ? r.id : newId(), at, name: typeof r.name === 'string' ? r.name.slice(0, 40) : '운동',
+    planned:n(r.planned), played:n(r.played), works:n(r.works), worksTotal:n(r.worksTotal), done:!!r.done, _p: r._p ? 1 : 0 };
+}
+const pub = (r) => ({ id:r.id, at:r.at, name:r.name, planned:r.planned, played:r.played, works:r.works, worksTotal:r.worksTotal, done:r.done });
+try { const a = JSON.parse(lsGet(LOG_KEY) || '[]'); logs = Array.isArray(a) ? a.map(cleanLog).filter(Boolean) : []; } catch (e) { logs = []; }
+function sortLogs(){ logs.sort((a, b) => a.at - b.at); }
+function persistLogs(){ sortLogs(); lsSet(LOG_KEY, JSON.stringify(logs.slice(-3000))); }
+sortLogs();
+
+function dk(d){ return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; }
+function dayKey(ms){ return dk(new Date(ms)); }
+function addDays(d, n){ return new Date(d.getFullYear(), d.getMonth(), d.getDate() + n); }
+function weekStart(d){ return new Date(d.getFullYear(), d.getMonth(), d.getDate() - ((d.getDay() + 6) % 7)); }
+function monthKey(ms){ const d = new Date(ms); return `${d.getFullYear()}-${pad(d.getMonth() + 1)}`; }
+function parseDk(k){ const a = k.split('-').map(Number); return new Date(a[0], a[1] - 1, a[2]); }
+function fmtDur(sec){
+  sec = Math.round(sec);
+  if (sec < 60) return `${sec}초`;
+  const h = Math.floor(sec / 3600), m = Math.round(sec % 3600 / 60);
+  if (!h) return `${m}분`;
+  return m ? `${h}시간 ${m}분` : `${h}시간`;
+}
+function shortDur(sec){ return sec >= 3600 ? `${(sec / 3600).toFixed(1)}시간` : `${Math.round(sec / 60)}분`; }
+
+function computeStats(list){
+  const goal = S.weeklyGoal;
+  const valid = list.filter((r) => r.played >= MIN_LOG);
+  const days = new Set(valid.map((r) => dayKey(r.at)));
+  const today = new Date(), tk = dk(today);
+  let cur = 0, d = days.has(tk) ? today : addDays(today, -1);
+  while (days.has(dk(d))) { cur++; d = addDays(d, -1); }
+  let best = 0, run = 0, prev = null;
+  for (const k of [...days].sort()) { run = prev && dk(addDays(prev, 1)) === k ? run + 1 : 1; best = Math.max(best, run); prev = parseDk(k); }
+  const wDays = new Map(), wSec = new Map(), mSec = new Map();
+  for (const r of valid) {
+    const dt = new Date(r.at), wk = dk(weekStart(dt)), mk = monthKey(r.at);
+    if (!wDays.has(wk)) wDays.set(wk, new Set());
+    wDays.get(wk).add(dayKey(r.at));
+    wSec.set(wk, (wSec.get(wk) || 0) + r.played);
+    mSec.set(mk, (mSec.get(mk) || 0) + r.played);
+  }
+  const thisWk = dk(weekStart(today)), lastWk = dk(addDays(weekStart(today), -7));
+  const met = [...wDays.entries()].filter(([, v]) => v.size >= goal).map(([k]) => k).sort();
+  let bestGoal = 0, gr = 0, pw = null;
+  for (const k of met) { gr = pw && dk(addDays(parseDk(pw), 7)) === k ? gr + 1 : 1; bestGoal = Math.max(bestGoal, gr); pw = k; }
+  const mkNow = monthKey(Date.now());
+  const monthList = valid.filter((r) => monthKey(r.at) === mkNow);
+  return {
+    goal, count:valid.length, total:valid.reduce((a, r) => a + r.played, 0), completed:valid.filter((r) => r.done).length,
+    cur, best, todayDone:days.has(tk), days,
+    week:{ days:wDays.get(thisWk) || new Set(), sec:wSec.get(thisWk) || 0, lastSec:wSec.get(lastWk) || 0 },
+    month:{ count:monthList.length, sec:monthList.reduce((a, r) => a + r.played, 0) },
+    goalWeeks:met.length, bestGoal, early:valid.some((r) => new Date(r.at).getHours() < 7), wSec, mSec,
+  };
+}
+const BADGES = [
+  { id:'first', icon:'🌱', name:'첫 운동', cond:'첫 기록 남기기', ok:(s) => s.count >= 1 },
+  { id:'s3', icon:'🔥', name:'3일 연속', cond:'3일 연속 운동', ok:(s) => s.best >= 3 },
+  { id:'s7', icon:'🔥', name:'7일 연속', cond:'7일 연속 운동', ok:(s) => s.best >= 7 },
+  { id:'s14', icon:'⚡', name:'14일 연속', cond:'14일 연속 운동', ok:(s) => s.best >= 14 },
+  { id:'s30', icon:'👑', name:'30일 연속', cond:'30일 연속 운동', ok:(s) => s.best >= 30 },
+  { id:'g1', icon:'🎯', name:'주간 목표', cond:'한 주 목표 일수 채우기', ok:(s) => s.goalWeeks >= 1 },
+  { id:'g4', icon:'🗓️', name:'4주 연속 목표', cond:'4주 연속 주간 목표', ok:(s) => s.bestGoal >= 4 },
+  { id:'c10', icon:'💪', name:'운동 10회', cond:'누적 10회', ok:(s) => s.count >= 10 },
+  { id:'c50', icon:'🏅', name:'운동 50회', cond:'누적 50회', ok:(s) => s.count >= 50 },
+  { id:'c100', icon:'🏆', name:'운동 100회', cond:'누적 100회', ok:(s) => s.count >= 100 },
+  { id:'f10', icon:'✅', name:'완주 10회', cond:'끝까지 완주 10회', ok:(s) => s.completed >= 10 },
+  { id:'h5', icon:'⏱️', name:'누적 5시간', cond:'운동 시간 5시간', ok:(s) => s.total >= 5 * 3600 },
+  { id:'h20', icon:'⏳', name:'누적 20시간', cond:'운동 시간 20시간', ok:(s) => s.total >= 20 * 3600 },
+  { id:'dawn', icon:'🌅', name:'새벽 운동', cond:'오전 7시 전에 시작', ok:(s) => s.early },
+];
+
+function currentName(){
+  const m = saved.find((x) => sameSettings(S, x.s));
+  if (m) return m.name;
+  const p = PRESETS.find((x) => Object.keys(x.v).every((k) => S[k] === x.v[k]));
+  return p ? p.name : autoName();
+}
+function playedNow(){ return playedBase + Math.max(0, Math.min(clock(), T) - playPos0); }
+function logRun(finished){
+  if (logged || !runInfo || !P) return null;
+  logged = true;
+  const played = Math.round(playedNow());
+  if (played < MIN_LOG) return null;
+  const pos = Math.min(clock(), T);
+  const works = P.segs.filter((g) => g.type === 'work' && g.end <= pos + 0.05).length;
+  const rec = { id:newId(), at:runInfo.at, name:runInfo.name, planned:Math.round(runInfo.planned), played, works,
+    worksTotal:runInfo.worksTotal, done: !!finished && played >= runInfo.planned * 0.9, _p:1 };
+  return addLog(rec);
+}
+function addLog(rec){
+  const before = computeStats(logs);
+  logs.push(rec);
+  persistLogs();
+  pushLog(rec);
+  const after = computeStats(logs);
+  updateStreakBadge(after);
+  const newBadges = BADGES.filter((b) => b.ok(after) && !b.ok(before));
+  return { rec, before, after, newBadges };
+}
+
+/* 계정 저장: 월별 문서 하나에 기록을 모음 (data/users/<id>/log-YYYY-MM) */
+function queueLog(fn){ logQ = logQ.then(fn).catch(() => {}); return logQ; }
+async function writeLogItem(r, value){
+  const m = monthKey(r.at);
+  const ref = logDb.doc('data/users/' + logUid + '/log-' + m);
+  const payload = { items:{ [r.id]: value } };
+  try { await ref.update(payload); }
+  catch (e) {
+    const snap = await ref.get();
+    if (snap.exists) await ref.update(payload); else await ref.set({ month:m, items:{ [r.id]: value } });
+  }
+}
+function pushLog(r){
+  if (!logDb) return;
+  queueLog(async () => { await writeLogItem(r, pub(r)); r._p = 0; persistLogs(); });
+}
+async function connectLogs(db, uid){
+  try {
+    const snap = await db.collection('data/users/' + uid).get();
+    const remote = [];
+    for (const d of snap.docs) {
+      if (!d.id.startsWith('log-')) continue;
+      const items = (d.data() || {}).items || {};
+      for (const k in items) { const r = cleanLog(items[k]); if (r) { r._p = 0; remote.push(r); } }
+    }
+    const ids = new Set(remote.map((r) => r.id));
+    const first = lsGet(LOG_SYNC_KEY) !== '1';
+    const pending = logs.filter((r) => !ids.has(r.id) && (first || r._p));
+    logDb = db; logUid = uid;
+    logs = remote.concat(pending.map((r) => Object.assign(r, { _p:1 })));
+    lsSet(LOG_SYNC_KEY, '1');
+    persistLogs();
+    for (const r of pending) pushLog(r);
+    updateStreakBadge();
+    if (!$('#logView').hidden) renderLog();
+  } catch (e) {}
+}
+function deleteLog(id){
+  const r = logs.find((x) => x.id === id);
+  if (!r) return;
+  logs = logs.filter((x) => x.id !== id);
+  persistLogs();
+  if (logDb) queueLog(() => writeLogItem(r, null));
+  updateStreakBadge();
+  renderLog();
+  toast('기록을 삭제했습니다');
+}
+
+function updateStreakBadge(st){
+  st = st || computeStats(logs);
+  $('#streakBadge').textContent = st.cur > 0 ? `🔥${st.cur}` : '';
+  $('#logOpen').setAttribute('aria-label', st.cur > 0 ? `운동 기록 보기, ${st.cur}일 연속` : '운동 기록 보기');
+}
+
+/* ---------- 기록 화면 ---------- */
+function el(tag, cls, text){ const e = document.createElement(tag); if (cls) e.className = cls; if (text !== undefined) e.textContent = text; return e; }
+function openLog(){
+  $('#setup').hidden = true; $('#startbar').hidden = true;
+  $('#logView').hidden = false;
+  lgEditMode = false; lgLimit = 40;
+  renderLog();
+  window.scrollTo(0, 0);
+}
+function closeLog(){
+  $('#logView').hidden = true;
+  $('#setup').hidden = false; $('#startbar').hidden = false;
+  window.scrollTo(0, 0);
+  refresh();
+}
+function renderLog(){
+  const st = computeStats(logs);
+  /* 연속 기록 */
+  const sk = $('#lgStreak'); sk.innerHTML = '';
+  const row = el('div', 'streak');
+  row.appendChild(el('div', 'fire', st.cur > 0 ? '🔥' : '🌱'));
+  const box = el('div');
+  const num = el('div', 'num', String(st.cur)); num.appendChild(el('small', '', '일 연속'));
+  box.appendChild(num);
+  let hint;
+  if (st.cur === 0) hint = '오늘 운동하면 연속 기록이 시작됩니다.';
+  else if (!st.todayDone) hint = `오늘 운동하면 ${st.cur + 1}일 연속이 됩니다.`;
+  else hint = st.cur >= st.best ? '지금이 최장 연속 기록입니다.' : `최장 기록은 ${st.best}일입니다.`;
+  box.appendChild(el('p', '', hint));
+  row.appendChild(box); sk.appendChild(row);
+  const tl = el('div', 'totline');
+  const add = (label, val) => { const s = el('span', '', label + ' '); s.appendChild(el('b', '', val)); tl.appendChild(s); };
+  add('최장', `${st.best}일`); add('누적', `${st.count}회`); add('운동 시간', fmtDur(st.total)); add('완주', `${st.completed}회`);
+  sk.appendChild(tl);
+
+  /* 이번 주 */
+  const wk = $('#lgWeek'); wk.innerHTML = '';
+  const dots = el('div', 'weekdots');
+  const ws = weekStart(new Date()), tk = dk(new Date());
+  for (let i = 0; i < 7; i++) {
+    const d = addDays(ws, i), k = dk(d);
+    const w = el('div', 'wd' + (st.days.has(k) ? ' on' : '') + (k === tk ? ' today' : ''));
+    w.appendChild(el('span', '', DAYS[d.getDay()]));
+    w.appendChild(el('i', '', st.days.has(k) ? '✓' : String(d.getDate())));
+    w.setAttribute('aria-label', `${d.getMonth() + 1}월 ${d.getDate()}일 ${st.days.has(k) ? '운동함' : '운동 안 함'}`);
+    dots.appendChild(w);
+  }
+  wk.appendChild(dots);
+  const meta = el('div', 'weekmeta');
+  const left = el('div');
+  left.appendChild(el('span', 'big', `${st.week.days.size}/${st.goal}일`));
+  const goal = el('div', 'goal');
+  goal.appendChild(el('span', '', '주간 목표'));
+  const dec = el('button', '', '−'); dec.type = 'button'; dec.setAttribute('aria-label', '주간 목표 줄이기');
+  const inc = el('button', '', '+'); inc.type = 'button'; inc.setAttribute('aria-label', '주간 목표 늘리기');
+  dec.addEventListener('click', () => { S.weeklyGoal = clamp(S.weeklyGoal - 1, 1, 7); save(); renderLog(); });
+  inc.addEventListener('click', () => { S.weeklyGoal = clamp(S.weeklyGoal + 1, 1, 7); save(); renderLog(); });
+  goal.appendChild(dec); goal.appendChild(el('b', '', `${st.goal}일`)); goal.appendChild(inc);
+  meta.appendChild(left); meta.appendChild(goal);
+  wk.appendChild(meta);
+  const pg = el('div', 'prog'); const pf = el('div'); pf.style.width = Math.min(100, st.week.days.size / st.goal * 100) + '%'; pg.appendChild(pf); wk.appendChild(pg);
+  const tl2 = el('div', 'totline');
+  const add2 = (label, val) => { const s = el('span', '', label + ' '); s.appendChild(el('b', '', val)); tl2.appendChild(s); };
+  add2('이번 주', fmtDur(st.week.sec)); add2('지난주', fmtDur(st.week.lastSec)); add2('이번 달', `${st.month.count}회, ${fmtDur(st.month.sec)}`);
+  wk.appendChild(tl2);
+
+  /* 막대 그래프 */
+  const bars = $('#lgBars'); bars.innerHTML = '';
+  const items = [];
+  if (lgMode === 'week') {
+    const w0 = weekStart(new Date());
+    for (let i = 7; i >= 0; i--) { const d = addDays(w0, -7 * i); items.push({ l:`${d.getMonth() + 1}/${d.getDate()}`, v:st.wSec.get(dk(d)) || 0, cur:i === 0 }); }
+  } else {
+    const n = new Date();
+    for (let i = 5; i >= 0; i--) { const d = new Date(n.getFullYear(), n.getMonth() - i, 1); items.push({ l:`${d.getMonth() + 1}월`, v:st.mSec.get(monthKey(d.getTime())) || 0, cur:i === 0 }); }
+  }
+  const mx = Math.max(1, ...items.map((x) => x.v));
+  for (const it of items) {
+    const b = el('div', 'bar' + (it.cur ? ' cur' : ''));
+    b.appendChild(el('span', 'v', it.v ? shortDur(it.v) : ''));
+    const bb = el('div', 'b'); bb.style.height = (it.v ? Math.max(3, it.v / mx * 100) : 0) + '%'; b.appendChild(bb);
+    b.appendChild(el('span', 'l', it.l));
+    b.setAttribute('aria-label', `${it.l} ${fmtDur(it.v)}`);
+    bars.appendChild(b);
+  }
+
+  /* 배지 */
+  const bg = $('#lgBadges'); bg.innerHTML = '';
+  let got = 0;
+  for (const b of BADGES) {
+    const ok = b.ok(st); if (ok) got++;
+    const c = el('div', 'bdg' + (ok ? '' : ' locked'));
+    c.appendChild(el('div', 'ic', b.icon)); c.appendChild(el('b', '', b.name)); c.appendChild(el('small', '', ok ? '달성' : b.cond));
+    bg.appendChild(c);
+  }
+  $('#lgBadgeHead').textContent = `배지 ${got}/${BADGES.length}`;
+
+  /* 날짜별 목록 */
+  const list = $('#lgList'); list.innerHTML = '';
+  const desc = logs.slice().sort((a, b) => b.at - a.at);
+  $('#lgEdit').hidden = !desc.length;
+  $('#lgEdit').textContent = lgEditMode ? '완료' : '편집';
+  if (!desc.length) list.appendChild(el('p', 'empty', '아직 기록이 없습니다. 1분 이상 운동하면 자동으로 기록됩니다.'));
+  const shown = desc.slice(0, lgLimit);
+  let curDay = null, rows = null;
+  for (const r of shown) {
+    const k = dayKey(r.at);
+    if (k !== curDay) {
+      curDay = k;
+      const d = new Date(r.at);
+      const dayTotal = desc.filter((x) => dayKey(x.at) === k).reduce((a, x) => a + x.played, 0);
+      const h = el('div', 'dayhead'); h.appendChild(el('span', '', `${d.getMonth() + 1}월 ${d.getDate()}일 (${DAYS[d.getDay()]})`)); h.appendChild(el('span', '', fmtDur(dayTotal)));
+      list.appendChild(h);
+      rows = el('div', 'rows'); list.appendChild(rows);
+    }
+    const d = new Date(r.at);
+    const rw = el('div', 'row logrow');
+    rw.appendChild(el('span', 'tm', `${pad(d.getHours())}:${pad(d.getMinutes())}`));
+    const lb = el('div', 'lbl'); lb.appendChild(el('b', '', r.name));
+    lb.appendChild(el('small', '', `${fmtDur(r.played)} 운동` + (r.worksTotal ? `, 운동 ${r.works}/${r.worksTotal}회` : '')));
+    rw.appendChild(lb);
+    if (lgEditMode) {
+      const armed = lgArmed === r.id;
+      const del = el('button', 'btn' + (armed ? ' danger' : ''), armed ? '삭제 확인' : '삭제'); del.type = 'button';
+      del.addEventListener('click', () => {
+        if (lgArmed !== r.id) { lgArmed = r.id; clearTimeout(lgArmTimer); lgArmTimer = setTimeout(() => { lgArmed = null; renderLog(); }, 3000); renderLog(); return; }
+        clearTimeout(lgArmTimer); lgArmed = null; deleteLog(r.id);
+      });
+      rw.appendChild(del);
+    } else {
+      rw.appendChild(el('span', 'chip2' + (r.done ? '' : ' part'), r.done ? '완주' : '중간 종료'));
+    }
+    rows.appendChild(rw);
+  }
+  $('#lgMore').hidden = desc.length <= lgLimit;
+  $('#lgStore').textContent = logDb ? '기록은 Claude 계정에 저장되어, 같은 계정으로 이 링크를 열면 다른 기기에서도 보입니다. 1분 미만 운동은 기록하지 않습니다.'
+    : '기록은 이 브라우저에만 저장됩니다. 1분 미만 운동은 기록하지 않습니다.';
+}
+$('#logOpen').addEventListener('click', openLog);
+$('#logBack').addEventListener('click', closeLog);
+$('#lgEdit').addEventListener('click', () => { lgEditMode = !lgEditMode; lgArmed = null; renderLog(); });
+$('#lgMore').addEventListener('click', () => { lgLimit += 40; renderLog(); });
+document.querySelectorAll('input[name="lgMode"]').forEach((r) => r.addEventListener('change', () => { lgMode = r.value; renderLog(); }));
+
+/* ---------- 축하 팝업 ---------- */
+function streakMsg(n){
+  if (n >= 30) return '한 달 넘게 하루도 빠지지 않았습니다.';
+  if (n >= 14) return '2주 넘게 이어 오고 있습니다. 꾸준함이 쌓이고 있습니다.';
+  if (n >= 7) return '일주일을 넘겼습니다. 이 흐름을 지켜 보세요.';
+  if (n >= 3) return `내일 운동하면 ${n + 1}일 연속입니다.`;
+  if (n === 2) return '내일이면 3일 연속 배지를 받습니다.';
+  return '';
+}
+function confetti(){
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const box = $('#confetti'); box.innerHTML = '';
+  const cols = Object.values(phaseColors()).concat(['#FFFFFF']);
+  for (let i = 0; i < 48; i++) {
+    const c = document.createElement('i');
+    c.style.left = (Math.random() * 100) + '%';
+    c.style.background = cols[i % cols.length];
+    c.style.animationDuration = (1.8 + Math.random() * 1.6) + 's';
+    c.style.animationDelay = (Math.random() * 0.5) + 's';
+    c.style.transform = `rotate(${Math.random() * 360}deg)`;
+    box.appendChild(c);
+  }
+  setTimeout(() => { box.innerHTML = ''; }, 4500);
+}
+function celebrate(res){
+  const { rec, before:b, after:s, newBadges } = res;
+  const firstToday = !b.todayDone && s.todayDone;
+  const goalNow = b.week.days.size < s.goal && s.week.days.size >= s.goal;
+  let icon, title, msg = '';
+  if (newBadges.length) { const nb = newBadges[0]; icon = nb.icon; title = `${nb.name} 달성`; }
+  else if (goalNow) { icon = '🎯'; title = '이번 주 목표 달성'; }
+  else if (s.cur >= 2 && firstToday) { icon = '🔥'; title = `${s.cur}일 연속 운동`; }
+  else if (rec.done) { icon = '💪'; title = ['오늘 운동 완료', '끝까지 해냈습니다', '완주했습니다'][Math.floor(Math.random() * 3)]; }
+  else { icon = '👍'; title = `${fmtDur(rec.played)} 운동했습니다`; }
+  if (!rec.done) msg = '중간에 끝낸 운동도 기록에 남겼습니다.';
+  else if (s.cur >= 2) msg = streakMsg(s.cur);
+  else if (firstToday) msg = '오늘부터 연속 기록이 시작됩니다. 내일도 이어가 보세요.';
+  $('#celeIcon').textContent = icon;
+  $('#celeTitle').textContent = title;
+  $('#celeMsg').textContent = msg;
+  const cb = $('#celeBadges'); cb.innerHTML = '';
+  for (const nb of newBadges) cb.appendChild(el('span', '', `${nb.icon} ${nb.name}`));
+  const lines = $('#celeLines'); lines.innerHTML = '';
+  const line = (k, v) => { const d = el('div'); d.appendChild(el('span', '', k)); d.appendChild(el('b', '', v)); lines.appendChild(d); };
+  line('오늘 운동', `${fmtDur(rec.played)}${rec.done ? ', 완주' : ''}`);
+  line('연속 운동', `${s.cur}일` + (s.best > s.cur ? ` (최장 ${s.best}일)` : s.cur > 1 ? ' (최장 기록)' : ''));
+  const left = Math.max(0, s.goal - s.week.days.size);
+  line('이번 주', `${s.week.days.size}/${s.goal}일` + (left ? `, 목표까지 ${left}일` : ', 목표 달성'));
+  line('이번 주 운동 시간', fmtDur(s.week.sec) + (s.week.lastSec ? ` (지난주 ${fmtDur(s.week.lastSec)})` : ''));
+  $('#cele').hidden = false;
+  if (rec.done || newBadges.length || goalNow) confetti();
+  setTimeout(() => $('#celeOk').focus({ preventScroll:true }), 50);
+}
+function closeCele(){ $('#cele').hidden = true; $('#confetti').innerHTML = ''; }
+$('#celeOk').addEventListener('click', closeCele);
+$('#celeLog').addEventListener('click', () => { closeCele(); if (!run.hidden) exitRun(); openLog(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !$('#cele').hidden) closeCele(); });
 
 /* 끝내기 버튼은 실수 방지를 위해 두 번 눌러야 동작 */
 let stopTimer = 0;
@@ -1665,6 +2140,7 @@ if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { if
 buildRows();
 refresh();
 $('#jsWarn').hidden = true;
+updateStreakBadge();
 connectRemote();
 checkVideoSupport();
 })();
