@@ -1,0 +1,17 @@
+{
+  "name": "인터벌 타이머",
+  "short_name": "인터벌",
+  "description": "워밍업, 운동, 휴식, 라운드, 쿨다운을 설정하는 무료 인터벌 타이머",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#EDF1EE",
+  "theme_color": "#EDF1EE",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
